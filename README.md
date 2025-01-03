@@ -12,7 +12,7 @@ require "vector"
 `Vector.lua` is all about vector objects which you create using the `vector()` function.
 Vectors are tables consisting of a list of values, starting at 1. Creating a vector looks like this:
 ```lua
-v = Vector(𝑥)
+v = Vector(…)
 ```
 For example, if you want to create a vector consisting of the values 10, 254 and 27, it would look like this:
 ```lua
@@ -36,15 +36,15 @@ You can also access values in vectors using letters, specifically x, y, z, and w
 
 ## Functions
 
-### Vector(𝑥)
-Creates a vector with a size of the length of `𝑥`, with each of the values in the vector corresponding to the argument of the same index.
+### Vector(…)
+Creates a vector with a size of the length of `…`, with each of the values in the vector corresponding to the argument of the same index.
 
 Example:
 ```lua
 v = Vector(644, 213, -186, 320, 123)
 ```
 
-### Vec1(𝑥), Vec2(𝑥), Vec3(𝑥), and Vec4(𝑥)
+### Vec1(…), Vec2(…), Vec3(…), and Vec4(…)
 Like `Vector` except that it has a set size and any missing values are automatically set to 0.
 
 Example:
@@ -55,7 +55,7 @@ print(v.y) --> 0
 print(v.z) --> 0
 ```
 
-### Vec(size, 𝑥)
+### Vec(size, …)
 `Vector` but the size is set by the `size` argument.
 
 Example:
@@ -66,7 +66,7 @@ print(v[3])  --> 123
 print(v[54]) --> 0
 ```
 
-### VecC(𝑥)
+### VecC(…)
 `Vec4` but the default value is 1 instead of 0, mainly made for [LÖVE](https://love2d.org)'s colour values. This is also why you can also use r, g, b, and a to access vectors.
 ```lua
 col = VecC(1,0,0)
